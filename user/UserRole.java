@@ -7,14 +7,14 @@ public class UserRole {
 
     public UserRole() {
         users = new ArrayList<>();
-        users.add(new Admin("admin", "admin123", "admin"));
-        users.add(new Caissier("caissier", "caissier123", "caissier"));
-        users.add(new Client("client", "client123", "client"));
+        users.add(new Admin("paisible", "admin123", "admin"));
+        users.add(new Caissier("augustin", "caissier123", "caissier"));
+        users.add(new Client("mulet", "client123", "client"));
     }
 
     public User authenticate(String nom, String motdePasse) {
         for (User  user : users) {
-            if (user.getnom().equals(nom) && user.getmotDePasse().equals(motdePasse)) {
+            if (user.getNom().equals(nom) && user.getMotDePasse().equals(motdePasse)) {
                 return user;
             }
         }

@@ -11,19 +11,19 @@ public abstract class User {
         this.role = role;
     }
 
-    public String getnom() {
+    public String getNom() {
         return nom;
     }
 
-    public void setnom(String nom) {
+    public void setNom(String nom) {
         this.nom = nom;
     }
 
-    public String getmotDePasse() {
+    public String getMotDePasse() {
         return motDePasse;
     }
 
-    public void setmotDePasse(String motDePasse) {
+    public void setMotDePasse(String motDePasse) {
         this.motDePasse = motDePasse;
     }
 

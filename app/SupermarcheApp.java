@@ -2,12 +2,24 @@ package app;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import user.*;
 
 public class SupermarcheApp {
     private static List<Produit> produits = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
+    private static UserRole userRole = new UserRole();
 
     public static void main(String[] args) {
+
+        User user = authUser();
+        if (user == null) {
+            System.out.println("Nom d'utilisateur ou mot de passe incorrect.");
+            return;
+        }
+        System.out.println("Connexion réussie en tant que " + user.getRole());
+        System.out.println("==========================");
+        System.out.println("Bienvenue " + user.getNom() + "!");
+
         int choix;
         do {
             System.out.println("Menu :");
@@ -40,6 +52,14 @@ public class SupermarcheApp {
                     System.out.println("Choix invalide. Veuillez réessayer.");
             }
         } while (choix != 5);
+    }
+
+    private static User authUser() {
+        System.out.print("Nom d'utilisateur : ");
+        String nom = scanner.nextLine();
+        System.out.print("Mot de passe : ");
+        String motDePasse = scanner.nextLine();
+        return userRole.authenticate(nom, motDePasse);
     }
 
     private static void ajouterProduit() {
