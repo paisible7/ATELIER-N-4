@@ -1,3 +1,4 @@
+package app;
 public class Produit {
     protected int id;
     protected String nom;

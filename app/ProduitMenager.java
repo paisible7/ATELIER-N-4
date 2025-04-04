@@ -1,3 +1,4 @@
+package app;
 public class ProduitMenager extends Produit {
     private String typeProduit;
     private String dateFabrication;

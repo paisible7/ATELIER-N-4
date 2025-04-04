@@ -1,3 +1,4 @@
+package app;
 public class ProduitAlimenaire extends Produit {
     private String dateExpiration;
     private String origine;

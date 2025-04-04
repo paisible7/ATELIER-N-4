@@ -1,3 +1,4 @@
+package app;
 public class ProduitCosmetique extends Produit {
     private String typePeau;
     private Boolean testeSurAnimaux;
