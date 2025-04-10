@@ -9,14 +9,13 @@ public class ProduitAlimentaire extends Produit {
         this.origine = origine;
     }
 
-    public String getDatePeremption() {
+    public String getDateExpiration() {
         return dateExpiration;
     }
 
-    public void setDatePeremption(String datePeremption) {
-        this.dateExpiration = datePeremption;
+    public void setDateExpiration(String dateExpiration) {
+        this.dateExpiration = dateExpiration;
     }
-
     public String getOrigine() {
         return origine;
     }

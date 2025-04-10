@@ -2,13 +2,20 @@ package com.example.app;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+
+import com.example.service.JsonManager;
 import com.example.user.*;
 public class SupermarcheApp {
-    private static List<Produit> produits = new ArrayList<>();
+    private static List<Produit> produits = JsonManager.chargerProduits();
     private static Scanner scanner = new Scanner(System.in);
     private static UserRole userRole = new UserRole();
 
     public static void main(String[] args) {
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            System.out.println("Sauvegarde des produits avant de quitter...");
+            JsonManager.sauvegarderProduits(produits);
+        }));
 
         User user = authUser();
         if (user == null) {

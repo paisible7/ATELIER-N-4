@@ -1,0 +1,9 @@
+[{
+    "prix": 12,
+    "dateExpiration": "2025",
+    "id": 1,
+    "origine": "rdc",
+    "type": "alimentaire",
+    "nom": "Pomme",
+    "quantite": 30
+}]
